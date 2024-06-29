@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{% block title %}title{% endblock %}</title>
+
+    <link rel="stylesheet" href="/assets/css/style.css"> 
+    <link rel="icon" href="/assets/images/favicon.png">
+</head>
+
+<body>
+    <h1>{{name}}</h1>
+    {% block navbar %}
+    {% include 'component/_navbar.html.twig' %}
+    {% endblock %}
+    {% block content %}{% endblock %}
+    {% block footer %}
+    {% include 'component/_footer.html.twig' %}
+    {% endblock %}
+
+</body>
+</html>
